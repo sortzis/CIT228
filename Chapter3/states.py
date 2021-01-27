@@ -1,0 +1,15 @@
+states = ["Michigan","Florida","Alabama","California","Ohio","Kentucky","Indiana","Georgia","New York"]
+print(f"{states[0]} is better than {states[1]}")
+states.append("Wisconsin")
+states.insert(4,"Mississippi")
+print("List after additions: ", states)
+del states[2]
+states.pop(7)
+states.remove("Ohio")
+print("List after deletions: ", states)
+print("List with temporary sort: ", sorted(states))
+states.reverse()
+print("List sorted in reverse: ", states)
+states.sort()
+print("List sorted in alphabetical order: ", states)
+print("The number of states in this list is: ", len(states))
