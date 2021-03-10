@@ -1,0 +1,13 @@
+{
+    "Class": "An object constructor",
+    "Elif": "The same as else/if in other programming languages.",
+    "For": "The beginning of a for loop.",
+    "comments": "Comments are code lines that will not be executed.",
+    "dictionary": "Python data type that stores key:value pairs.",
+    "int": "One specific type of data used in Python, integer",
+    "lists": "An ordered, and changeable collection.",
+    "operators": "A symbol to perform an arithmetic function in Python.",
+    "random number": "A function to call a random number.",
+    "tuple": "An ordered, and unchangeable collection.",
+    "variables": "Containers for storing data values."
+}

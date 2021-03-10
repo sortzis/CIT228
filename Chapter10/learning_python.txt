@@ -1,0 +1,3 @@
+In Python you can use for loops to sort through a list of data.
+In Python you can use keys and values to differntiate objects in a dictionary.
+In Python you can inheritance in classes.
