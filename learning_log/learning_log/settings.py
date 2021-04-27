@@ -22,9 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-&ghg1a57sev22(&_n+frxgfxl67s#ul2gey4sq0t_w5!v6tdfk'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+import os
 
+if os.environ.get('DEBUG') == 'TRUE':
+    DEBUG = True
+elif os.environ.get('DEBUG') == 'FALSE':
+    DEBUG = False
 ALLOWED_HOSTS = []
 
 
@@ -34,6 +37,9 @@ INSTALLED_APPS = [
     # My apps
     'learning_logs',
     'users',
+
+    # Third party apps.
+    'bootstrap4',
 
     #Default django apps.
     'django.contrib.admin',
@@ -59,7 +65,7 @@ ROOT_URLCONF = 'learning_log.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -131,3 +137,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # My settings
 LOGIN_URL = 'users:login'
+
+# Heroku settings.
+import django_heroku
+django_heroku.settings(locals())
